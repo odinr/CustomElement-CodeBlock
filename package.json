@@ -21,6 +21,9 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "http-server": "^0.11.1",
     "prismjs": "^1.14.0",
     "text-loader": "0.0.1",
