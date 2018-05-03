@@ -16,67 +16,6 @@
 
     --code-line-number-color: #999999;
     --code-line-number-divider: 1px solid var(--code-line-number-color);
-    
-}
-
-
-:host-context(.darktheme) {
-    --code-color: var(--theme-dark-color, white);
-    --code-background: var(--theme-dark-background, #333333);
-    --code-t-text: darkseagreen;
-    --code-t-number: #f08d49;
-    --code-t-function: #f8c555;
-    --code-t-keyword: #cc99cd;
-    --code-text-shadow: 1px 2px rgba(0,0,0,0.25);
-}
-
-:host(.dark){
-    --code-background: #333333;
-}
-
-:host(.light){
-    --code-color: var(--theme-light-color, #3f3f3f);
-    --code-background: var(--theme-light-background, #f5f2f0);
-    --code-text-shadow: none;
-
-    --code-t-text: green;
-    --code-t-number: #905;
-    --code-t-selector: #690;
-    --code-t-operator: #9a6e3a;
-    --code-t-keyword: #07a;
-    --code-t-variable: #e90;
-    --code-t-function: #dd4a68;
-
-    --code-line-number-color: #999999;
-    --code-line-number-divider: 1px solid var(--code-line-number-color);
-}
-
-
-
-
-:host(.c64){
-    --code-text-shadow: 1px 2px rgba(0,0,0,0.25);
-
-    --code-c64-white: #fff;
-    --code-c64-grey: #9f9f9f;
-    --code-c64-greyer: #505050;
-    --code-c64-greyest: #787878;
-    --code-c64-black: #000;
-    --code-c64-purple: #7869c4;
-    --code-c64-voilet: #8b3f96;
-    --code-c64-green: #94e089;
-    --code-c64-yellow: #bfce72;
-
-    background: var(--code-c64-purple) !important;
-
-    --code-color: var(--code-c64-yellow);
-    --code-t-text: var(--code-c64-grey);
-    --code-t-number: var(--code-c64-voilet);
-    --code-t-selector: var(--code-c64-green);
-    --code-t-operator: var(--code-c64-grey);
-    --code-t-keyword: var(--code-c64-grey);
-    --code-t-variable: var(--code-c64-voilet);
-    --code-t-function: var(--code-c64-white);
 }
 
 :host{
@@ -124,7 +63,6 @@
     overflow:scroll;
     padding: 10px 0;
     
-    
     font-family: var(--code-font);
     font-size: var(--code-font-size);
     line-height: var(--code-font-height);
@@ -132,18 +70,12 @@
     background: var(--code-background);
 }
 
-:host(.c64) #container{
-    background: #40318d;
-}
-:host(.c64){
-    padding: 50px 0;
-}
-
 #container{
     display: flex;
     flex-flow: row;
     position: relative;
     padding: var(--code-padding, 0 10px);
+    background: var(--code-container-background);
 }
 
 #higlighter{

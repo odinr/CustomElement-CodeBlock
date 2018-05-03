@@ -29,19 +29,19 @@
     <body class="darktheme">
         <script src="./assets/main.js" async></script>
 
-        <div style="position: fixed; right: 0; bottom: 0;">
-            <button onclick="document.querySelector('body').className = ''">Light</button>
+        <div style="position: fixed; right: 0; bottom: 0; z-index: 999;">
+            <button onclick="document.querySelector('body').className = 'light'">Light</button>
             <button onclick="document.querySelector('body').className = 'darktheme'">Dark</button>
         </div>
 
         <h1>This example</h1>
         <small>JavaScript</small>
-        <codin-code-block src="/demo.js"></codin-code-block>
+        <codin-codeblock src="/demo.js"></codin-codeblock>
         <small>HTML</small>
-        <codin-code-block src="/files/sample-markup.html" lang="html"></codin-code-block>
+        <codin-codeblock src="/files/sample-markup.html" lang="html"></codin-codeblock>
 
         <h2>This is some inline code</h2>
-        <codin-code-block>
+        <codin-codeblock>
 /** this is a test */
 const a = "test"; 
 const bb = ['elg','bert','now']; 
@@ -51,20 +51,20 @@ class Elg extends MyPony{
         return (bb) => bb.call('me');
     }
 }
-        </codin-code-block>
+        </codin-codeblock>
 
         <h2>Fetching code from javascript file</h2>
-        <codin-code-block src="/files/demo.js"></codin-code-block>
+        <codin-codeblock src="/files/demo.js"></codin-codeblock>
 
         <h2>Fetching code from json file</h2>
-        <codin-code-block src="/files/demo.json" highlight="9-a"></codin-code-block>
+        <codin-codeblock src="/files/demo.json" highlight="9-a"></codin-codeblock>
 
         <h2>Fetching code from php file</h2>
         <button onclick="document.getElementById('php-demo').className = ''">Theme</button>
         <button onclick="document.getElementById('php-demo').className = 'light'">Light</button>
         <button onclick="document.getElementById('php-demo').className = 'dark'">Dark</button>
         <button onclick="document.getElementById('php-demo').className = 'c64'">C64</button>
-        <codin-code-block id="php-demo" src="/files/demo.php" ></codin-code-block>
+        <codin-codeblock id="php-demo" src="/files/demo.php" ></codin-codeblock>
         <div style="display: flex; justify-content: flex-end;">
             <button onclick="document.getElementById('php-demo').setAttribute('highlight', '2')">goto line 2</button>
             <button onclick="document.getElementById('php-demo').setAttribute('highlight', '9-11')">function</button>
