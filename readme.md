@@ -1,5 +1,7 @@
 # Code Block
-demo **https://odinr.github.io/CustomElement-CodeBlock/**
+[demo](https://odinr.github.io/CustomElement-CodeBlock/)
+
+## Install
 ```
 npm i @codin/html-codeblock
 ```
@@ -14,7 +16,10 @@ When importing source, you need to handle building CSS and file import
 ```javascript
 import "@codin/html-codeblock/src/code-block";
 ```
+## Prism
+This webcomponent is build on **[PrismJs](http://prismjs.com/)**
 
+Not the most optimal, since it doesn´t use modules, but good enough and lightweight. Hopefully in the future Prism will go over to modules so we can slim down this component
 ### Components
 
 all componenets from prism are compatible, but they are not module based, so all components need to be required the old way with global scope.
@@ -32,7 +37,7 @@ import {Prism} "@codin/html-codeblock/src/code-block";
 require("prismjs/plugins/prism-custom-class");
 ```
 
-### Styling
+## Styling
 
 ```css
 --code-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
