@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./build.js",
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist")
@@ -19,7 +19,11 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["babel-preset-env"]
+            presets: ["babel-preset-env"],
+            plugins: [
+              require("babel-plugin-transform-custom-element-classes"),
+              require("babel-plugin-transform-es2015-classes")
+            ]
           }
         }
       }
