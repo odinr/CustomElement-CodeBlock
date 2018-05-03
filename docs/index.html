@@ -36,9 +36,9 @@
 
         <h1>This example</h1>
         <small>JavaScript</small>
-        <codin-codeblock src="/demo.js"></codin-codeblock>
+        <codin-codeblock src="./demo.js"></codin-codeblock>
         <small>HTML</small>
-        <codin-codeblock src="/files/sample-markup.html" lang="html"></codin-codeblock>
+        <codin-codeblock src="./files/sample-markup.html" lang="html"></codin-codeblock>
 
         <h2>This is some inline code</h2>
         <codin-codeblock>
@@ -54,17 +54,17 @@ class Elg extends MyPony{
         </codin-codeblock>
 
         <h2>Fetching code from javascript file</h2>
-        <codin-codeblock src="/files/demo.js"></codin-codeblock>
+        <codin-codeblock src="./files/demo.js"></codin-codeblock>
 
         <h2>Fetching code from json file</h2>
-        <codin-codeblock src="/files/demo.json" highlight="9-a"></codin-codeblock>
+        <codin-codeblock src="./files/demo.json" highlight="9-a"></codin-codeblock>
 
         <h2>Fetching code from php file</h2>
         <button onclick="document.getElementById('php-demo').className = ''">Theme</button>
         <button onclick="document.getElementById('php-demo').className = 'light'">Light</button>
         <button onclick="document.getElementById('php-demo').className = 'dark'">Dark</button>
         <button onclick="document.getElementById('php-demo').className = 'c64'">C64</button>
-        <codin-codeblock id="php-demo" src="/files/demo.php" ></codin-codeblock>
+        <codin-codeblock id="php-demo" src="./files/demo.php" ></codin-codeblock>
         <div style="display: flex; justify-content: flex-end;">
             <button onclick="document.getElementById('php-demo').setAttribute('highlight', '2')">goto line 2</button>
             <button onclick="document.getElementById('php-demo').setAttribute('highlight', '9-11')">function</button>
