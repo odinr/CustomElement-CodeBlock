@@ -1,6 +1,6 @@
 # Code Block
 ```
-npm install @codin/codin-code-block
+npm i @codin/html-codeblock
 ```
 
 ```javascript
@@ -32,16 +32,14 @@ require("prismjs/plugins/prism-custom-class");
 ```
 
 @todo
-- <input type="checkbox" disabled> esLint
-- <input type="checkbox" disabled> document code
+-  esLint
+-  document code
 - **Events**
-    - <input type="checkbox" disabled> onFileLoad
-    - <input type="checkbox" disabled> onFileLoaded
-    - <input type="checkbox" disabled> onContentParse
-    - <input type="checkbox" disabled> onContentParsed
+    - onFileLoad
+    - onFileLoaded
+    - onContentParse
+    - onContentParsed
 - **Observers**
-    - <input type="checkbox" disabled> customElement.innerHtml
-    - <input type="checkbox" disabled checked> attr.Src
-    - <input type="checkbox" disabled checked> attr.HighLight
+    - customElement.innerHtml
 - **Style**
-    - <input type="checkbox" disabled> Split to theme files
+    - Split to theme files
