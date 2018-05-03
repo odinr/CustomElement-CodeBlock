@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish",
     "build": "webpack -p",
     "watch": "webpack --watch -d -o ./demo/assets/main.js --entry ./demo/demo.js",
     "predemo": "webpack -p -o ./demo/assets/main.js --entry ./demo/demo.js",
