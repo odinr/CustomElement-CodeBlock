@@ -1,5 +1,7 @@
 # Code Block
-[demo](https://odinr.github.io/CustomElement-CodeBlock/)
+Plain vanilla CustomElement 
+**[demo](https://odinr.github.io/CustomElement-CodeBlock/)**
+
 
 ## Install
 ```
@@ -7,15 +9,20 @@ npm i @codin/html-codeblock
 ```
 
 ```javascript
+// This package is precompiled with polyfills.
 import "@codin/html-codeblock";
+
+// If using with other CustomElements include the source.
+import "@codin/html-codeblock/src";
+
+// remember to handle css import 
+// example webpack.config
+{
+    test: /\.(pcss)$/,
+    use: "text-loader" // or any raw loader or scss handler
+}
 ```
 
-Import the source for more agile component.
-When importing source, you need to handle building CSS and file import
-
-```javascript
-import "@codin/html-codeblock/src/code-block";
-```
 ## Prism
 This webcomponent is build on **[PrismJs](http://prismjs.com/)**
 

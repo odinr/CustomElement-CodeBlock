@@ -17,14 +17,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["babel-preset-env"],
-            plugins: [
-              require("babel-plugin-transform-custom-element-classes"),
-              require("babel-plugin-transform-es2015-classes")
-            ]
-          }
+          loader: "babel-loader"
         }
       }
     ]

@@ -1,4 +1,3 @@
-// import regeneratorRuntime from "regenerator-runtime";
 
 import Prism from "prismjs";
 import style from "./style.pcss";
