@@ -1,6 +1,6 @@
 {
   "name": "@codin/html-codeblock",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "webcomponent for displaying code block",
   "main": "./dist/main.js",
   "scripts": {
