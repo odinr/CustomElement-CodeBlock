@@ -14,6 +14,9 @@ tmpl.innerHTML = `
   <div id="code"></div>
 </div>`;
 
+if (window.ShadyCSS) {
+  window.ShadyCSS.prepareTemplate(tmpl, 'codin-codeblock');
+}
 /**
  * Custom HTML element for displaying code content.
  *
@@ -44,6 +47,9 @@ export default class CodinCodeBlock extends HTMLElement {
   }
 
   connectedCallback() {
+    if (window.ShadyCSS) {
+      window.ShadyCSS.styleElement(this);
+    }
     this._connected = true;
   }
   /**
@@ -195,4 +201,5 @@ export default class CodinCodeBlock extends HTMLElement {
     style.height = lineHeight * lines;
   }
 }
+
 

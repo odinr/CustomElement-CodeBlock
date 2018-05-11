@@ -1,2 +1,2 @@
 import Element from "./code-block.js";
-customElements.define("codin-codeblock", Element);
+customElements.define('codin-codeblock', Element);

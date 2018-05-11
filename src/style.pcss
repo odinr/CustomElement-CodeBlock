@@ -1,164 +1,224 @@
 :host {
-    --code-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --code-font-size: 1rem;
-    --code-font-height: 1.5;
-    --code-color: var(--theme-color, #3f3f3f);
-    --code-background: var(--theme-background, #f5f2f0);
-    --code-text-shadow: none;
+  --code-font: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --code-font-size: 1rem;
+  --code-font-height: 1.5;
+  --code-color: var(--theme-color, #3f3f3f);
+  --code-background: var(--theme-background, #f5f2f0);
+  --code-text-shadow: none;
 
-    --code-t-text: green;
-    --code-t-number: #905;
-    --code-t-selector: #690;
-    --code-t-operator: #9a6e3a;
-    --code-t-keyword: #07a;
-    --code-t-variable: #e90;
-    --code-t-function: #dd4a68;
+  --code-t-text: green;
+  --code-t-number: #905;
+  --code-t-selector: #690;
+  --code-t-operator: #9a6e3a;
+  --code-t-keyword: #07a;
+  --code-t-variable: #e90;
+  --code-t-function: #dd4a68;
 
-    --code-line-number-color: #999999;
-    --code-line-number-divider: 1px solid var(--code-line-number-color);
-}
-
-:host{
-    --code-el-cdata: var(--code-t-text);
-    --code-el-comment: var(--code-t-text);
-    --code-el-doctype: var(--code-t-text);
-    --code-el-prolog: var(--code-t-text);
-    --code-el-namespace: var(--code-t-text);
-
-    --code-el-property: var(--code-t-number);
-    --code-el-tag: var(--code-t-number);
-    --code-el-boolean: var(--code-t-number);
-    --code-el-number: var(--code-t-number);
-    --code-el-constant: var(--code-t-number);
-    --code-el-symbol: var(--code-t-number);
-    --code-el-deleted: var(--code-t-number);
-
-    --code-el-selector: var(--code-t-selector);
-    --code-el-attr-name: var(--code-t-selector);
-    --code-el-string: var(--code-t-selector);
-    --code-el-char: var(--code-t-selector);
-    --code-el-builtin: var(--code-t-selector);
-    --code-el-inserted: var(--code-t-selector);
-
-    --code-el-operator: var(--code-t-operator);
-    --code-el-entity: var(--code-t-operator);
-    --code-el-url: var(--code-t-operator);
-
-    --code-el-atrule: var(--code-t-keyword);
-    --code-el-attr-value: var(--code-t-keyword);
-    --code-el-keyword: var(--code-t-keyword);
-
-    --code-el-regex: var(--code-t-variable);
-    --code-el-important: var(--code-t-variable);
-    --code-el-variable: var(--code-t-variable);
-
-    --code-el-function: var(--code-t-function);
-    --code-el-class-name: var(--code-t-function);
-
-    --code-el-punctuation: #999999;
+  --code-line-number-color: #999999;
+  --code-line-number-divider: 1px solid var(--code-line-number-color);
 }
 
 :host {
-    display: block;
-    overflow: auto;
-    padding: 10px 0;
-    
-    font-family: var(--code-font);
-    font-size: var(--code-font-size);
-    line-height: var(--code-font-height);
-    color: var(--code-color);
-    background: var(--code-background);
+  --code-el-cdata: var(--code-t-text);
+  --code-el-comment: var(--code-t-text);
+  --code-el-doctype: var(--code-t-text);
+  --code-el-prolog: var(--code-t-text);
+  --code-el-namespace: var(--code-t-text);
+
+  --code-el-property: var(--code-t-number);
+  --code-el-tag: var(--code-t-number);
+  --code-el-boolean: var(--code-t-number);
+  --code-el-number: var(--code-t-number);
+  --code-el-constant: var(--code-t-number);
+  --code-el-symbol: var(--code-t-number);
+  --code-el-deleted: var(--code-t-number);
+
+  --code-el-selector: var(--code-t-selector);
+  --code-el-attr-name: var(--code-t-selector);
+  --code-el-string: var(--code-t-selector);
+  --code-el-char: var(--code-t-selector);
+  --code-el-builtin: var(--code-t-selector);
+  --code-el-inserted: var(--code-t-selector);
+
+  --code-el-operator: var(--code-t-operator);
+  --code-el-entity: var(--code-t-operator);
+  --code-el-url: var(--code-t-operator);
+
+  --code-el-atrule: var(--code-t-keyword);
+  --code-el-attr-value: var(--code-t-keyword);
+  --code-el-keyword: var(--code-t-keyword);
+
+  --code-el-regex: var(--code-t-variable);
+  --code-el-important: var(--code-t-variable);
+  --code-el-variable: var(--code-t-variable);
+
+  --code-el-function: var(--code-t-function);
+  --code-el-class-name: var(--code-t-function);
+
+  --code-el-punctuation: #999999;
 }
 
-#container{
-    display: flex;
-    flex-flow: row;
-    position: relative;
-    padding: var(--code-padding, 0 10px);
-    background: var(--code-container-background);
+:host {
+  display: block;
+  overflow: auto;
+  padding: 10px 0;
+
+  font-family: var(--code-font);
+  font-size: var(--code-font-size);
+  line-height: var(--code-font-height);
+  color: var(--code-color);
+  background: var(--code-background);
 }
 
-#higlighter{
-    position: absolute;
-    background: rgba(255,255,104,0.15);
-    width: calc(100% - 2px);
-    left:1px;
-    top: 0;
-    height: 0;
-    z-index: 0;
-    transition: all 300ms ease;
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
-    margin-top: -2px;
-    border-radius: 0.25em;
+#container {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  padding: var(--code-padding, 0 10px);
+  background: var(--code-container-background);
 }
 
-#counter{
-    display: flex;
-    flex-flow: column;
-    margin-right: 1em;
-    padding-right: 0.5em;
-    text-align: right;
-    z-index: 1;
-
-    color: var(--code-line-number-color);
-    border-right: var(--code-line-number-divider);
+#higlighter {
+  position: absolute;
+  background: rgba(255, 255, 104, 0.15);
+  width: calc(100% - 2px);
+  left: 1px;
+  top: 0;
+  height: 0;
+  z-index: 0;
+  transition: all 300ms ease;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  margin-top: -2px;
+  border-radius: 0.25em;
 }
 
-#code{
-    z-index: 1;
-    overflow-x: auto;
+#counter {
+  display: flex;
+  flex-flow: column;
+  margin-right: 1em;
+  padding-right: 0.5em;
+  text-align: right;
+  z-index: 1;
+
+  color: var(--code-line-number-color);
+  border-right: var(--code-line-number-divider);
 }
 
-pre, code{
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    tab-size: 4;
-    hyphens: none;
-    font-size:1em;
-    font-family: var(--code-font);
-    text-shadow: var(--code-text-shadow);
-    
+#code {
+  z-index: 1;
+  overflow-x: auto;
+}
+
+pre,
+code {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  tab-size: 4;
+  hyphens: none;
+  font-size: 1em;
+  font-family: var(--code-font);
+  text-shadow: var(--code-text-shadow);
 }
 
 .token.important,
 .token.bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 .token.italic {
-	font-style: italic;
+  font-style: italic;
 }
 .token.entity {
-	cursor: help;
+  cursor: help;
 }
 
-.namespace{color: var(--code-el-namespace);}
-.token.cdata {color: var(--code-el-cdata);}
-.token.comment {color: var(--code-el-comment);}
-.token.doctype {color: var(--code-el-doctype);}
-.token.prolog {color: var(--code-el-prolog);}
-.token.property {color: var(--code-el-property);}
-.token.tag {color: var(--code-el-tag);}
-.token.boolean {color: var(--code-el-boolean);}
-.token.number {color: var(--code-el-number);}
-.token.constant {color: var(--code-el-constant);}
-.token.symbol {color: var(--code-el-symbol);}
-.token.deleted {color: var(--code-el-deleted);}
-.token.selector {color: var(--code-el-selector);}
-.token.attr-name {color: var(--code-el-attr-name);}
-.token.string {color: var(--code-el-string);}
-.token.char {color: var(--code-el-char);}
-.token.builtin {color: var(--code-el-builtin);}
-.token.inserted {color: var(--code-el-inserted);}
-.token.punctuation {color: var(--code-el-punctuation);}
-.token.operator {color: var(--code-el-operator);}
-.token.entity {color: var(--code-el-entity);}
-.token.url {color: var(--code-el-url);}
-.token.atrule {color: var(--code-el-atrule);}
-.token.attr-value {color: var(--code-el-attr-value);}
-.token.keyword {color: var(--code-el-keyword);}
-.token.function {color: var(--code-el-function);}
-.token.class-name {color: var(--code-el-class-name);}
-.token.regex {color: var(--code-el-regex);}
-.token.important {color: var(--code-el-important);}
-.token.variable {color: var(--code-el-variable);}
+.namespace {
+  color: var(--code-el-namespace);
+}
+.token.cdata {
+  color: var(--code-el-cdata);
+}
+.token.comment {
+  color: var(--code-el-comment);
+}
+.token.doctype {
+  color: var(--code-el-doctype);
+}
+.token.prolog {
+  color: var(--code-el-prolog);
+}
+.token.property {
+  color: var(--code-el-property);
+}
+.token.tag {
+  color: var(--code-el-tag);
+}
+.token.boolean {
+  color: var(--code-el-boolean);
+}
+.token.number {
+  color: var(--code-el-number);
+}
+.token.constant {
+  color: var(--code-el-constant);
+}
+.token.symbol {
+  color: var(--code-el-symbol);
+}
+.token.deleted {
+  color: var(--code-el-deleted);
+}
+.token.selector {
+  color: var(--code-el-selector);
+}
+.token.attr-name {
+  color: var(--code-el-attr-name);
+}
+.token.string {
+  color: var(--code-el-string);
+}
+.token.char {
+  color: var(--code-el-char);
+}
+.token.builtin {
+  color: var(--code-el-builtin);
+}
+.token.inserted {
+  color: var(--code-el-inserted);
+}
+.token.punctuation {
+  color: var(--code-el-punctuation);
+}
+.token.operator {
+  color: var(--code-el-operator);
+}
+.token.entity {
+  color: var(--code-el-entity);
+}
+.token.url {
+  color: var(--code-el-url);
+}
+.token.atrule {
+  color: var(--code-el-atrule);
+}
+.token.attr-value {
+  color: var(--code-el-attr-value);
+}
+.token.keyword {
+  color: var(--code-el-keyword);
+}
+.token.function {
+  color: var(--code-el-function);
+}
+.token.class-name {
+  color: var(--code-el-class-name);
+}
+.token.regex {
+  color: var(--code-el-regex);
+}
+.token.important {
+  color: var(--code-el-important);
+}
+.token.variable {
+  color: var(--code-el-variable);
+}
